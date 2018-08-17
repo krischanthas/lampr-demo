@@ -12,11 +12,10 @@ $action = $_GET['action'];
 
 switch($method){
     case 'GET':
-        $output['action']= $action;
         require_once("get/".$action.".php");
         break;
     case 'POST':
-        $output['message']= 'POST Request Made';
+        require_once('post/'.$action.'.php');
         break;
     case 'PUT':
         $output['message']= 'PUT Request Made';
